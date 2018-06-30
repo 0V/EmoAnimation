@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:EmoAnimations"
+             x:Class="EmoAnimations.MainPage"
+             Title="Emo Animation DEMO">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#000"/>
+                <Setter Property="TextColor" Value="#fff"/>
+                <Setter Property="FontSize" Value="16"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackLayout x:Name="AnimationArea" HeightRequest="300"  HorizontalOptions="CenterAndExpand" VerticalOptions="Start" Spacing="7">
+
+        </StackLayout>
+        <ScrollView Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10">
+            <Grid  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="5" ColumnSpacing="5">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Grid.Column="0" Text="Heart Beat" Clicked="EmoHeartBeat_Clicked"/>
+                <Button Grid.Row="0" Grid.Column="1" Text="Stamp Text" Clicked="EmoStampText_Clicked"/>
+                <Button Grid.Row="1" Grid.Column="0" Text="Color Fade" Clicked="EmoColorFade_Clicked"/>
+                <!--
+                <Button Grid.Row="1" Grid.Column="1" Text="Aleph-0" Clicked="Aleph0_Clicked"/>
+                <Button Grid.Row="2" Grid.Column="0" Text="Aleph-0" Clicked="Aleph0_Clicked"/>
+                <Button Grid.Row="2" Grid.Column="1" Text="Aleph-0" Clicked="Aleph0_Clicked"/>
+                <Button Grid.Row="3" Grid.Column="0" Text="Aleph-0" Clicked="Aleph0_Clicked"/>
+                <Button Grid.Row="3" Grid.Column="1" Text="Aleph-0" Clicked="Aleph0_Clicked"/>
+                -->
+            </Grid>
+        </ScrollView>
+
+        <!--Button  Grid.Row="2" Text="Cancel" Margin="10,0" BackgroundColor="#EC407A" Clicked="Cancel_Clicked"/-->
+    </Grid>
+
+</ContentPage>

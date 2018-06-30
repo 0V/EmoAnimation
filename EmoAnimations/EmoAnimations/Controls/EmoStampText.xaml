@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmoAnimations.Controls.EmoStampText">
+
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#FF6E40"/>
+                <Setter Property="TextColor" Value="#fff"/>
+                <Setter Property="FontSize" Value="16"/>
+            </Style>
+            <Color x:Key="Pink">#F32196</Color>
+            <Color x:Key="DeepPurple">#7C4DFF</Color>
+        </ResourceDictionary>
+    </ContentView.Resources>
+
+
+    <ContentView.Content>
+        <Grid Padding="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Text="Emo Stamp Text" HorizontalOptions="Center" FontSize="14" TextColor="#666" Margin="10"/>
+
+            <!-- Animetion Element -->
+            <Grid Grid.Row="1" Padding="20" HeightRequest="250">
+                <StackLayout x:Name="StampedCard" BackgroundColor="{StaticResource DeepPurple}" Padding="10" Margin="10"
+                                 VerticalOptions="FillAndExpand" HorizontalOptions="Fill" HeightRequest="200">
+                    <StackLayout x:Name="ContentText" >
+                        <Label Text="Hello Emo Animation" HorizontalOptions="Center" TextColor="#FFF" FontSize="16"/>
+                        <Label Text="Do and Reload Animation" HorizontalOptions="Center" TextColor="#FFF" FontSize="12"/>
+                    </StackLayout>
+                </StackLayout>
+                <Label x:Name="OverlayText" IsVisible="False" Opacity="0" FontAttributes="Bold" Rotation="-10"  Text="STAMP!" FontSize="42"
+                           TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                </Label>
+            </Grid>
+            <!-- Animetion Element End -->
+
+            <Button Grid.Row="2" Grid.Column="0" Text="DO" Clicked="Do_Clicked" />
+            <Button Grid.Row="3" Grid.Column="0" Text="RELOAD" Clicked="Reload_Clicked" />
+        </Grid>
+    </ContentView.Content>
+</ContentView>
