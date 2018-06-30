@@ -27,7 +27,7 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-            <Label Text="Emo Color Ripple" HorizontalOptions="Center" Margin="10"/>
+            <Label Text="Emo Color Fade" HorizontalOptions="Center" Margin="10"/>
                        
             <!-- Animetion Element -->
             <Grid Grid.Row="1" Padding="20" HeightRequest="200">
